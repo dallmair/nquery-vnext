@@ -1,4 +1,17 @@
-@ECHO OFF
+@echo off
+
+for /d %%F in ("%ProgramFiles(x86)%\Microsoft Visual Studio\2017\*") do (
+ set MSBuild="%%F\MSBuild\15.0\Bin\MSBuild.exe"
+ goto validate
+)
+
+:validate
+
+if exist %MSBuild% goto build
+echo ERROR: You need Visual Studio 2017 to build.
+exit
+
+:build
 
 if not exist bin mkdir bin
 
@@ -7,4 +20,4 @@ if not exist bin mkdir bin
 ::       means that that rebuilding cannot successfully delete the task
 ::       assembly.
 
-"%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" /nologo /m /v:m /nr:false /flp:verbosity=normal;LogFile=bin\msbuild.log %*
+%MSBuild% /nologo /m /v:m /nr:false /flp:verbosity=normal;LogFile=bin\msbuild.log %*
