@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nerdbank.GitVersioning" Version="1.6.21" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\NQuery\NQuery.csproj" />
   </ItemGroup>
 
