@@ -52,6 +52,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".common", ".common", "{C86B
 		Common\Common.props = Common\Common.props
 		Common\Common.targets = Common\Common.targets
 		Common\CommonAssemblyInfo.cs = Common\CommonAssemblyInfo.cs
+		Common\Testing.targets = Common\Testing.targets
 		Common\WPF.targets = Common\WPF.targets
 	EndProjectSection
 EndProject

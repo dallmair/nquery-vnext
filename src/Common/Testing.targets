@@ -1,0 +1,11 @@
+<Project>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.runner.msbuild" Version="2.3.0-beta1-build3642" PrivateAssets="All" />
+  </ItemGroup>
+
+  <Target Name="RunTests">
+    <xunit Assemblies="$(TargetPath)" />
+  </Target>
+
+</Project>

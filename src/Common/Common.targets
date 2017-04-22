@@ -20,4 +20,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+
+  <Target Name="RunTests" />
+
+  <Import Project="testing.targets" Condition="$(AssemblyName.EndsWith('Tests'))" />
+
 </Project>
