@@ -16,4 +16,10 @@
     <PackageTags>$(Product) SQL</PackageTags>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)\NQuery.snk</AssemblyOriginatorKeyFile>
+    <DefineConstants>$(DefineConstants);SIGNED</DefineConstants>
+  </PropertyGroup>
+
 </Project>
