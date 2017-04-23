@@ -25,6 +25,5 @@
   </ItemGroup>
 
   <Import Project="..\Common\WPF.targets" />
-  <Import Project="..\NQuery.Shared\NQuery.Shared.projitems" Label="Shared" />
 
 </Project>

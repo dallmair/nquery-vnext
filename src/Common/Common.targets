@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)\CommonAssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\ExceptionBuilder.cs" />
   </ItemGroup>
 
   <ItemGroup>
