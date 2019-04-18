@@ -3,7 +3,6 @@ using NQuery.Binding;
 
 namespace NQuery.Optimization
 {
-
     internal static class Optimizer
     {
         public static BoundQuery Optimize(BoundQuery query)
@@ -67,8 +66,11 @@ namespace NQuery.Optimization
             // after the join ordering, we need to push selections again
             yield return new SelectionPusher();
 
-            // TODO: at most one row reordering
+            // at most one row reordering
+            yield return new AtMostOneRowReorderer();
+
             // TODO: push computations
+            //yield return new ComputationPusher();
 
             // physical op choosing
             yield return new HashMatchPhysicalOperatorChooser();
@@ -77,6 +79,7 @@ namespace NQuery.Optimization
             yield return new ExceptIntersectPhysicalOperatorChooser();
 
             // TODO: null scan optimization
+            //yield return new NullScanOptimizer();
         }
     }
 }
